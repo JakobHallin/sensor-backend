@@ -1,30 +1,33 @@
 
 ## Data model (suggested)
 This is just a suggested data model, you’re free to modify it as you see fit.
-User {
-  id
-  email
-  username
-  password 
+### User {
+  id,
+  email,
+  username,
+  password, 
 }
 
-Sensor {
-  id
-  owner
-  name
-  description (optional)
-  model
+## Sensor 
+{
+  id,
+  owner,
+  name,
+  description (optional),
+  model,
 }
 
-Readings {
-  id
-  sensor
-  temperature
-  humidity
-  timestamp
+### Readings 
+{
+  id,
+  sensor,
+  temperature,
+  humidity,
+  timestamp,
 }
 
 Indexes: add indexes on (sensor, timestamp) for performance.
+
 Unique together: (sensor, timestamp)
 
 ## API endpoints
