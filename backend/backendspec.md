@@ -49,7 +49,9 @@ PUT /api/sensors/{sensor_id}/ — update.
 
 DELETE /api/sensors/{sensor_id}/ — delete (cascade readings).
 
-Readings (Auth required)
+### Readings (Auth required)
 GET /api/sensors/{sensor_id}/readings/ — list readings for a sensor. Filters: timestamp_from, timestamp_to.
+
 POST /api/sensors/{sensors_id}/readings/ — create. Body: temperature, humidity, timestamp.
+
 Response models should be Pydantic models with examples in docstrings so the generated OpenAPI looks helpful.
