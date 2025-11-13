@@ -1,12 +1,9 @@
 import models.user as user_model
-def create_user(id, email, username, password):
-    return user_model.User(id, email, username, password)
-def get_user_info(user):
-    return {
-        "id": user.id,
-        "email": user.email,
-        "username": user.username
-    }
+import models.user_test as user_test
+
+
 print ( "hello world")
-User1 = create_user(1, "test@gmail.com", "testuser", "assword") 
-print(get_user_info(User1))
+User1 = user_model.create_user(1, "test@gmail.com", "testuser", "assword") 
+print(user_model.get_user_info(User1))
+
+user_test.test_userCreation()
